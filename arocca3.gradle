@@ -12,8 +12,6 @@ jar {
   archiveName = 'M2.jar'
 }
 
-def jdkHome = System.getenv("java.home")
-
 dependencies {
   compile files('lib/resources.jar')
 }
