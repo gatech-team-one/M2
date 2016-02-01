@@ -1,0 +1,20 @@
+defaultTasks   'jar'
+
+apply plugin: 'java'
+
+//Define the contents of the jar file
+jar  {
+    manifest {
+        attributes( 'Implement-Title' : 'v0.1 Reza',
+                'Main-Class': 'edu.gatech.oad.antlab.pkg1.AntLabMain',
+                'Class-Path' : 'lib/resources.jar')
+
+    }
+
+    destinationDir = file(".")
+    archiveName = 'M2.jar'
+}
+
+dependencies {
+    compile files('lib/resources.jar')
+}
